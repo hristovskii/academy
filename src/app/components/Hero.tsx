@@ -7,8 +7,17 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 
 import Image from "next/image";
-import nextEvent from "@/app/resources/next_event.jpg";
+import nextEvent from "@/app/resources/devops.jpg";
 import { useState, useEffect } from "react";
+
+
+
+import img1 from "@/app/resources/ea_robotics.png";
+import img2 from "@/app/resources/net.jpg";
+import img3 from "@/app/resources/ui_ux.jpg";
+import img4 from "@/app/resources/vue.jpg";
+import img5 from "@/app/resources/frontend.jpg";
+import img6 from "@/app/resources/arduino.png";
 
 export default function Hero() {
 
@@ -21,7 +30,7 @@ export default function Hero() {
 
     useEffect(() => {
 
-       const target = new Date("05/12/2024 23:59:59");
+       const target = new Date("05/10/2024 17:00:00");
     
 
       const interval = setInterval(() => {
@@ -70,7 +79,7 @@ export default function Hero() {
           <p className="md:text-base text-sm text-slate-50 my-3 text-balance leading-none">
           Join us for the 7th edition of Learn How To workshop and <span className="font-medium">Power Your Future!</span>
           </p>
-          <Link href={""}>
+          <Link href={"https://docs.google.com/forms/d/e/1FAIpQLScCdt9R7owKxxetWBAUM60zvMtw6Lyy8uLqYOJ1zlkHMOmshA/viewform"}>
             <Button text="Apply Now!" icon={MdArrowOutward}></Button>
             <span>Time Left to Apply:</span> <br />
               {/* <span className="text-eestec font-bold">XX</span><span> d </span>
@@ -80,8 +89,8 @@ export default function Hero() {
 
                 {toBeAnnounced ? (<span className="text-eestec font-bold">To Be Announced!</span>) : 
                 (eventTime ? (<span className="text-eestec font-bold">Event has started!</span>) : (
-                <><span>{days-2} d <span className="text-eestec font-bold"> : </span> 
-                {hours} h <span className="text-eestec font-bold"> : </span> 
+                <><span>{days-3} d <span className="text-eestec font-bold"> : </span> 
+                {hours+6} h <span className="text-eestec font-bold"> : </span> 
                 {minutes} mins <span className="text-eestec font-bold"> : </span> 
                 {seconds} sec</span><br /></> )
                 )
@@ -91,7 +100,7 @@ export default function Hero() {
               
           </Link>
           <br />
-          <Link href={"https://www.instagram.com/lht_skopje/"}>
+          <Link href={"https://www.instagram.com/ea_skopje"}>
               <FaInstagram size={60} color="#0b7eb5"></FaInstagram> 
           </Link>
         </div>

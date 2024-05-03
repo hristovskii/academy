@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import img1 from "@/app/resources/lht1.jpg";
-import img2 from "@/app/resources/lht2.jpg";
-import img3 from "@/app/resources/lht3.jpg";
-import img4 from "@/app/resources/lht4.jpg";
-import img5 from "@/app/resources/lht5.jpg";
-import img6 from "@/app/resources/lht6.jpg";
+import img1 from "@/app/resources/ea_robotics.png";
+import img2 from "@/app/resources/net.jpg";
+import img3 from "@/app/resources/ui_ux.jpg";
+import img4 from "@/app/resources/vue.jpg";
+import img5 from "@/app/resources/frontend.jpg";
+import img6 from "@/app/resources/arduino.png";
 import Heading from "./Heading";
 
 export default function Events() {
@@ -16,16 +16,22 @@ export default function Events() {
             <Heading heading={"Latest Events"}></Heading>
             </div>
             <div className="lg:flex justify-evenly items-center gap-14">
-                <Image src={img6} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
-                <Image src={img5} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
-                <Image src={img4} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
+                <Image src={img1} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
+                <Image src={img2} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
+                <Image src={img3} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
             </div>
 
+
+            {/* style={{
+            borderRadius: "100px", 
+          }} */}
+
             <div className="lg:flex justify-evenly items-center gap-14">
-                <Image src={img3} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
-                <Image src={img2} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
-                <Image src={img1} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
+                <Image src={img4} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
+                <Image src={img5} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
+                <Image src={img6} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
             </div>
+            
         </section>
     );
 }
