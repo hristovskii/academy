@@ -11,12 +11,13 @@ import { RevealList } from  'next-reveal'
 export default function Sponsors() {
     return(
         <section className="my-10 md:mx-28 mx-12">
+            <RevealList interval={100} delay={500}>
             <div className="lg:px-36 md:px-16 px-4 grid justify-center items-center">
             <Heading heading={"Sponsors & Supporters "}></Heading>
             </div>
             
             <div className="lg:flex justify-evenly items-center gap-14">
-            <RevealList interval={100} delay={500}>
+            
                 <div className="text-eestec text-center items-center" >
                 <Image src={dose} alt="Sponsor Logo" height={300} className="mt-8 mb-8"></Image>
                 </div>
@@ -33,10 +34,10 @@ export default function Sponsors() {
                 <Image src={pekara} alt="Sponsor Logo" height={300} className="mt-8 mb-8"></Image>
                 </div>
 
-            </RevealList>
             </div>
 
             
+            </RevealList>
         </section>
     );
 }
