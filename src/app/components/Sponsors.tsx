@@ -12,7 +12,7 @@ export default function Sponsors() {
     return(
         <section className="my-10 md:mx-28 mx-12">
             <div className="lg:px-36 md:px-16 px-4 grid justify-center items-center">
-            <Heading heading={"Organizators for the coming event"}></Heading>
+            <Heading heading={"Sponsors & Supporters "}></Heading>
             </div>
             
             <div className="lg:flex justify-evenly items-center gap-14">
