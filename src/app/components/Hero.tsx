@@ -18,6 +18,7 @@ import img3 from "@/app/resources/ui_ux.jpg";
 import img4 from "@/app/resources/vue.jpg";
 import img5 from "@/app/resources/frontend.jpg";
 import img6 from "@/app/resources/arduino.png";
+import Heading from "./Heading";
 
 export default function Hero() {
 
@@ -74,10 +75,10 @@ export default function Hero() {
       }}>
         <div className="container mx-auto md:px-10 px-5 py-16">
           <h1 className="md:text-5xl text-4xl font-semibold my-3 text-balance text-white">
-              Learn How to develop Apps and Improve Your <span className="text-eestec font-bold">Coding</span> Skills with <span className="text-eestec font-bold">EESTEC LC Skopje</span>!
+              Stay on top of popular <span className="underline decoration-eestec">technologies</span>  with <span className="text-eestec font-bold">EESTEC ACADEMY</span>!
           </h1>
           <p className="md:text-base text-sm text-slate-50 my-3 text-balance leading-none">
-          Join us for the 7th edition of Learn How To workshop and <span className="font-medium">Power Your Future!</span>
+          Learn through EESTEC ACADEMY's diffrent modules. <span className="font-medium underline decoration-eestec">Power Your Future!</span>
           </p>
           <Link href={"https://docs.google.com/forms/d/e/1FAIpQLScCdt9R7owKxxetWBAUM60zvMtw6Lyy8uLqYOJ1zlkHMOmshA/viewform"}>
             <Button text="Apply Now!" icon={MdArrowOutward}></Button>
