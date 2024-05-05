@@ -22,7 +22,6 @@ import Heading from "./Heading";
 
 export default function Hero() {
 
-    const [toBeAnnounced, setAnnounced] = useState(false);
     const [eventTime, setEventTime] = useState(false);
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
@@ -53,9 +52,7 @@ export default function Hero() {
 
         const targetTime = new Date("05/02/2025 21:41:30"); // Convert target time to a Date object
 
-        if(target.getTime() === targetTime.getTime() && toBeAnnounced === false){ // Compare target time with targetTime
-          setAnnounced(true);
-        } else if(d<=0 && h<=0 && m<=0 && s<=0){
+        if(d<=0 && h<=0 && m<=0 && s<=0){
           setEventTime(true);
         }
 
@@ -82,7 +79,7 @@ export default function Hero() {
           </h1>
           
           <p className="md:text-base text-sm text-slate-50 my-3 text-balance leading-none">
-          Learn through EESTEC ACADEMY's diffrent modules. <span className="font-medium underline decoration-eestec">Power Your Future!</span>
+          Learn through EESTEC ACADEMY&apos;s diffrent modules. <span className="font-medium underline decoration-eestec">Power Your Future!</span>
           </p>
           <Link href={"https://docs.google.com/forms/d/e/1FAIpQLScCdt9R7owKxxetWBAUM60zvMtw6Lyy8uLqYOJ1zlkHMOmshA/viewform"}>
             <Button text="Apply Now!" icon={MdArrowOutward}></Button>
@@ -92,7 +89,7 @@ export default function Hero() {
               <span className="text-eestec font-bold">XX</span><span> m </span> 
               <span className="text-eestec font-bold">XX</span><span> s </span>   */}
 
-                {toBeAnnounced ? (<span className="text-eestec font-bold">To Be Announced!</span>) : 
+                {
                 (eventTime ? (<span className="text-eestec font-bold">Event has started!</span>) : (
                 <><span>{days-3} d <span className="text-eestec font-bold"> : </span> 
                 {hours+6} h <span className="text-eestec font-bold"> : </span> 
@@ -113,8 +110,7 @@ export default function Hero() {
         <div className="lg:flex justify-evenly items-center gap-14">
           <h1 className="md:text-5xl text-4xl font-semibold my-3 text-center text-white">
           Next<span> <span className="text-eestec font-bold">event</span> in:</span> <br /> <br />
-          {toBeAnnounced ? (<span className="text-eestec font-bold">To Be Announced!</span>) : 
-                (eventTime ? (<span className="text-eestec font-bold">Event has started!</span>) : (
+          {(eventTime ? (<span className="text-eestec font-bold">Event has started!</span>) : (
                 <><span>{days} d <span className="text-eestec font-bold"> : </span> 
                 {hours} h <span className="text-eestec font-bold"> : </span> 
                 {minutes} mins <span className="text-eestec font-bold"> : </span> 
