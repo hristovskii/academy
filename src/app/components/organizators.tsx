@@ -7,10 +7,13 @@ import img3 from "@/app/resources/organizators/andrej.jpg";
 import img4 from "@/app/resources/organizators/angela.jpg";
 import img5 from "@/app/resources/organizators/hristijan.jpg";
 import Heading from "./Heading";
+import { RevealList } from  'next-reveal'
 
 export default function Organizators() {
     return(
+        
         <section className="my-10 md:mx-28 mx-12">
+            <RevealList interval={100} delay={500}>
             <div className="lg:px-36 md:px-16 px-4 grid justify-center items-center">
             <Heading heading={"Organizators for the coming event"}></Heading>
             </div>
@@ -48,7 +51,8 @@ export default function Organizators() {
                 </div>
                 
             </div>
-            
+            </RevealList>
         </section>
+        
     );
 }

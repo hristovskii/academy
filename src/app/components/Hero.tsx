@@ -9,7 +9,7 @@ import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import nextEvent from "@/app/resources/devops.jpg";
 import { useState, useEffect } from "react";
-
+import { RevealList } from  'next-reveal'
 
 
 import img1 from "@/app/resources/ea_robotics.png";
@@ -73,10 +73,14 @@ export default function Hero() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}>
+
+      <RevealList interval={500} delay={500}>
         <div className="container mx-auto md:px-10 px-5 py-16">
+          
           <h1 className="md:text-5xl text-4xl font-semibold my-3 text-balance text-white">
-              Stay on top of popular <span className="underline decoration-eestec">technologies</span>  with <span className="text-eestec font-bold">EESTEC ACADEMY</span>!
+              Stay on top of popular <span className="underline decoration-eestec">technologies</span>  <br /> with <span className="text-eestec font-bold">EESTEC ACADEMY</span>!
           </h1>
+          
           <p className="md:text-base text-sm text-slate-50 my-3 text-balance leading-none">
           Learn through EESTEC ACADEMY's diffrent modules. <span className="font-medium underline decoration-eestec">Power Your Future!</span>
           </p>
@@ -124,7 +128,7 @@ export default function Hero() {
           </div>
                 
         </div>
-
+      </RevealList>
         
       </main>  
     );

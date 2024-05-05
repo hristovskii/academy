@@ -7,13 +7,14 @@ import Photo1 from "@/app/resources/logo/participants.png";
 import Photo2 from "@/app/resources/logo/participants_2.png";
 import Icon from "./Icon";
 import { MdElectricBolt } from "react-icons/md";
-
+import { RevealList } from  'next-reveal'
 
 
 export default function EESTEC() {
 
     return(
         <section className="mx-auto my-12 lg:px-16 px-8">
+            <RevealList interval={100} delay={500}>
             <div className="lg:flex lg:flex-row lg:gap-3 grid">
                 <div className="basis-4/5 lg:order-1 order-2">
                         <div className="flex flex-row">
@@ -43,6 +44,7 @@ export default function EESTEC() {
                     </div>
                 </div>
             </div>
+            </RevealList>
         </section>
     );
 }
