@@ -22,15 +22,24 @@ import Heading from "./Heading";
 
 export default function Hero() {
 
+
     const [eventTime, setEventTime] = useState(false);
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
 
+
+    const [applyTime, setApplyTime] = useState(false);
+    const [applyDays, setApplyDays] = useState(0);
+    const [applyHours, setApplyHours] = useState(0);
+    const [applyMinutes, setApplyMinutes] = useState(0);
+    const [applySeconds, setApplySeconds] = useState(0);
+
     useEffect(() => {
 
        const target = new Date("05/10/2024 17:00:00");
+       const applyTarget = new Date("05/07/2024 23:59:59");
     
 
       const interval = setInterval(() => {
@@ -50,10 +59,30 @@ export default function Hero() {
         const s = Math.floor((difference % (1000 * 60)) / 1000);
         setSeconds(s);
 
+        const applyDifference = applyTarget.getTime() - now.getTime();
+
+        const ad = Math.floor(applyDifference / (1000 * 60 * 60 * 24));
+        setApplyDays(ad);
+
+        const ah = Math.floor((applyDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        setApplyHours(ah);
+
+        const am = Math.floor((applyDifference % (1000 * 60 * 60)) / (1000 * 60));
+        setApplyMinutes(am);
+
+        const as = Math.floor((applyDifference % (1000 * 60)) / 1000);
+        setApplySeconds(as);
+
         const targetTime = new Date("05/02/2025 21:41:30"); // Convert target time to a Date object
+
+
 
         if(d<=0 && h<=0 && m<=0 && s<=0){
           setEventTime(true);
+        }
+
+        if(ad<=0 && ah<=0 && am<=0 && as<=0){
+          setApplyTime(true);
         }
 
       }, 1000);
@@ -90,11 +119,11 @@ export default function Hero() {
               <span className="text-eestec font-bold">XX</span><span> s </span>   */}
 
                 {
-                (eventTime ? (<span className="text-eestec font-bold">Event has started!</span>) : (
-                <><span>{days-3} d <span className="text-eestec font-bold"> : </span> 
-                {hours+6} h <span className="text-eestec font-bold"> : </span> 
-                {minutes} mins <span className="text-eestec font-bold"> : </span> 
-                {seconds} sec</span><br /></> )
+                (applyTime ? (<span className="text-red-500 font-bold">Time for Applying has ended!</span>) : (
+                <><span>{applyDays} d <span className="text-eestec font-bold"> : </span> 
+                {applyHours} h <span className="text-eestec font-bold"> : </span> 
+                {applyMinutes} mins <span className="text-eestec font-bold"> : </span> 
+                {applySeconds} sec</span><br /></> )
                 )
               }
 
