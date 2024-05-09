@@ -6,6 +6,7 @@ import finki from "@/app/resources/finki.png";
 import dose from "@/app/resources/dose.png";
 import kvatro from "@/app/resources/kvatro.webp";
 import morino from "@/app/resources/Morino.webp";
+import redbull from "@/app/resources/redbull.png";
 import pekara from "@/app/resources/Pekarata_od_karshi.webp";
 import Heading from "./Heading";
 import { RevealList } from  'next-reveal'
@@ -21,11 +22,11 @@ export default function Sponsors() {
             <div className="lg:flex justify-evenly items-center gap-14">
             
                 <div className="text-eestec text-center items-center" >
-                <Image src={finki} alt="Sponsor Logo" height={300} className="mt-8 mb-8"></Image>
+                <Image src={finki} alt="Sponsor Logo" height={400} className="mt-8 mb-8"></Image>
                 </div>
                 
                 <div className="text-eestec text-center items-center" >
-                <Image src={tmf} alt="Sponsor Logo" height={300} className="mt-8 mb-8"></Image>
+                <Image src={tmf} alt="Sponsor Logo" height={250} className="mt-8 mb-8"></Image>
                 </div>
 
             </div>
@@ -40,6 +41,10 @@ export default function Sponsors() {
             
             <div className="lg:flex justify-evenly items-center gap-14">
             
+                 <div className="text-eestec text-center items-center" >
+                <Image src={redbull} alt="Sponsor Logo" height={300} className="mt-8 mb-8"></Image>
+                </div>
+
                 <div className="text-eestec text-center items-center" >
                 <Image src={morino} alt="Sponsor Logo" height={300} className="mt-8 mb-8"></Image>
                 </div>
